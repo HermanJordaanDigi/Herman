@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Widget</title>
+</head>
+<body>
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+                if (!document.getElementById('root')) {
+                    var root = d.createElement('div');
+                    root.id = 'root';
+                    d.body.appendChild(root);
+                }
+                if (window.myChatWidget && typeof window.myChatWidget.load === 'function') {
+                    window.myChatWidget.load({
+                        assistantId: '8085361c-0bb1-4c68-ab89-0247952785c1',
+                        apiKey: '79cd82e4-dbfc-476e-94ac-9f707c860adb',
+                    });
+                }
+            };
+            v.src = "https://agentivehub.com/production.bundle.min.js";
+            v.type = "text/javascript";
+            s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+    </script>
+</body>
+</html>
